@@ -4,7 +4,11 @@ import com.designPattern.deliveryMethods.DeliveryByBicycle;
 import com.designPattern.deliveryMethods.DeliveryByCar;
 import com.designPattern.deliveryMethods.DeliveryByTruck;
 
-
+/*
+ * @author : ROHAN RAVINDRA KADAM
+ * @purpose: Delivery Manager or Factory Class
+ * @name   : DeliveryManager
+ * */
 
 public class DeliveryManager {
 

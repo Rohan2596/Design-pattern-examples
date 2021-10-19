@@ -2,6 +2,13 @@ package com.designPattern.deliveryMethods;
 
 import com.designPattern.PackageInfo;
 
+
+/*
+ * @author : ROHAN RAVINDRA KADAM
+ * @purpose: Delivery Package by Car
+ * @name   : DeliveryByCar
+ * */
+
 public class DeliveryByCar implements PackageDelivery{
 
     @Override

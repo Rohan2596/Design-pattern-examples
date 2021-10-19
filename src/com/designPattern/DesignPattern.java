@@ -1,5 +1,11 @@
 package com.designPattern;
 
+
+/*
+* @author : ROHAN RAVINDRA KADAM
+* @purpose: Factory  Design pattern main class
+* @name   : DesignPattern
+* */
 public class DesignPattern {
 
     public static void main(String[] args) {
