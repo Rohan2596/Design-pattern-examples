@@ -1,8 +1,8 @@
 package com.designPattern;
 
 import com.designPattern.deliveryMethods.DeliveryByBicycle;
-import com.designPattern.deliveryMethods.DeliveryByCar;
 import com.designPattern.deliveryMethods.DeliveryByTruck;
+import com.designPattern.proxy.DeliveryProxyForCar;
 
 /*
  * @author : ROHAN RAVINDRA KADAM
@@ -19,7 +19,7 @@ public class DeliveryManager {
            return new DeliveryByBicycle().deliveryWay(packageInfo);
        }
        if(packageInfo.getSize().equals("MEDIUM")){
-           return new DeliveryByCar().deliveryWay(packageInfo);
+           return new DeliveryProxyForCar().deliveryWay(packageInfo);
        }
        if(packageInfo.getSize().equals("LARGE")){
            return new DeliveryByTruck().deliveryWay(packageInfo);

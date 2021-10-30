@@ -3,11 +3,11 @@ package com.designPattern;
 public class PackageInfo {
 
     private String size;
-    private String weight;
+    private int weight;
 
 
 
-    public PackageInfo(String size, String weight) {
+    public PackageInfo(String size, int weight) {
         this.size = size;
         this.weight = weight;
     }
@@ -23,11 +23,11 @@ public class PackageInfo {
         this.size = size;
     }
 
-    public String getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 }
