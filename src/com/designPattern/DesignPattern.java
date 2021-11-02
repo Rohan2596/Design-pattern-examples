@@ -3,7 +3,7 @@ package com.designPattern;
 
 /*
  * @author : ROHAN RAVINDRA KADAM
- * @purpose: Factory  Design pattern main class
+ * @purpose: Proxy  Design pattern main class
  * @name   : DesignPattern
  * */
 public class DesignPattern {
@@ -22,7 +22,7 @@ public class DesignPattern {
         System.out.println(deliveryManager.deliveryManagerFactory(packageInfoMedium));
 
         //Package Info Size Large and weight 20kgs
-        PackageInfo packageInfoLarge = new PackageInfo("LARGE", 20);
+        PackageInfo packageInfoLarge = new PackageInfo("LARGE", 52);
         System.out.println(deliveryManager.deliveryManagerFactory(packageInfoLarge));
 
     }
