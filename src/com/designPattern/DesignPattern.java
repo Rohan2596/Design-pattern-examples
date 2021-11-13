@@ -1,6 +1,8 @@
 package com.designPattern;
 
 
+import java.util.Scanner;
+
 /*
  * @author : ROHAN RAVINDRA KADAM
  * @purpose: Proxy  Design pattern main class
