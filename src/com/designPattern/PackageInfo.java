@@ -4,7 +4,7 @@ public class PackageInfo {
 
     private String size;
     private int weight;
-
+    private Boolean customPackaging;
 
 
     public PackageInfo(String size, int weight) {
@@ -29,5 +29,19 @@ public class PackageInfo {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public Boolean getCustomPackaging() {
+        return customPackaging;
+    }
+
+    public void setCustomPackaging(Boolean customPackaging) {
+        this.customPackaging = customPackaging;
+    }
+
+    public PackageInfo(String size, int weight, Boolean customPackaging) {
+        this.size = size;
+        this.weight = weight;
+        this.customPackaging = customPackaging;
     }
 }

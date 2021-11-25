@@ -22,7 +22,10 @@ public class DesignPattern {
         System.out.println("Enter the Package weight ie 5,10 or 20");
         int weight=scanner.nextInt();
 
-        PackageInfo packageInfo= new PackageInfo(size,weight);
+        System.out.println("Enter Custom Packaging True or False");
+        boolean condition =scanner.nextBoolean();
+
+        PackageInfo packageInfo= new PackageInfo(size,weight,condition);
         System.out.println(deliveryManager.deliveryManagerFactory(packageInfo));
 
     }
