@@ -1,6 +1,7 @@
 package com.designPattern;
 
 import com.designPattern.deliveryMethods.DeliveryByBicycle;
+import com.designPattern.deliveryMethods.DeliveryByCar;
 import com.designPattern.deliveryMethods.DeliveryByTruck;
 import com.designPattern.proxy.DeliveryProxyForBicycle;
 import com.designPattern.proxy.DeliveryProxyForCar;
@@ -18,13 +19,13 @@ public class DeliveryManager {
 
 
        if(packageInfo.getSize().equals("SMALL")){
-           return new DeliveryProxyForBicycle().deliveryWay(packageInfo);
+           return new DeliveryByBicycle().deliveryWay(packageInfo);
        }
        if(packageInfo.getSize().equals("MEDIUM")){
-           return new DeliveryProxyForCar().deliveryWay(packageInfo);
+           return new DeliveryByCar().deliveryWay(packageInfo);
        }
        if(packageInfo.getSize().equals("LARGE")){
-           return new DeliveryProxyForTruck().deliveryWay(packageInfo);
+           return new DeliveryByTruck().deliveryWay(packageInfo);
        }
        return "FAILED TO DELIVERY";
    }
