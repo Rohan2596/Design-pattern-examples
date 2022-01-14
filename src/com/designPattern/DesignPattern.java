@@ -1,6 +1,12 @@
 package com.designPattern;
 
 
+import com.designPattern.type.LargePackage;
+import com.designPattern.type.MediumPackage;
+import com.designPattern.type.SmallPackage;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -10,23 +16,25 @@ import java.util.Scanner;
  * */
 public class DesignPattern {
 
+    public static double calculateCost(List<Visitable> packages){
+        PackageVisitor packageVisitor= new PackageVisitor();
+        for (Visitable items:packages) {
+            items.accept(packageVisitor);
+        }
+        return packageVisitor.getTotalCost();
+
+    }
+
+
     public static void main(String[] args) {
-        System.out.println("***** Delivery Manager Process Started *****");
 
-        DeliveryManager deliveryManager = new DeliveryManager();
+        List<Visitable> packages= new ArrayList<>();
+        packages.add(new SmallPackage("SMALL",10));
+        packages.add(new MediumPackage("MEDIUM",20));
+        packages.add(new LargePackage("LARGE",30));
+        System.out.println("Total Checkout Cost:-"+calculateCost(packages));
 
-        Scanner scanner =new Scanner(System.in);
-        System.out.println("Enter the Package Size SMALL,LARGE OR MEDIUM");
-       String size=scanner.next();
 
-        System.out.println("Enter the Package weight ie 5,10 or 20");
-        int weight=scanner.nextInt();
-
-        System.out.println("Enter Custom Packaging True or False");
-        boolean condition =scanner.nextBoolean();
-
-        PackageInfo packageInfo= new PackageInfo(size,weight,condition);
-        System.out.println(deliveryManager.deliveryManagerFactory(packageInfo));
 
     }
 }
