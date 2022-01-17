@@ -7,11 +7,10 @@ import com.designPattern.type.SmallPackage;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /*
  * @author : ROHAN RAVINDRA KADAM
- * @purpose: Facade  Design pattern main class
+ * @purpose: Visitor  Design pattern main class
  * @name   : DesignPattern
  * */
 public class DesignPattern {
